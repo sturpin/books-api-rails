@@ -15,8 +15,8 @@ describe 'Books API', type: :request do
             get '/api/v1/books'
     
             expect(response).to have_http_status(:success)
-            expect(JSON.parse(response.body).size).to eq(2)
-            expect(JSON.parse(response.body)).to eq(
+            expect(response_body.size).to eq(2)
+            expect(response_body).to eq(
                 [
                     {
                         'id' => 1,
